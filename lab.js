@@ -108,7 +108,7 @@ var carDetails = {
 */
 
 function greeting( obj ) {
-  let{title: prefix, firstName: name, lastName: surname} = obj
+  let{title, firstName, lastName} = obj
   
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
@@ -264,25 +264,27 @@ var user = {
     to be newPrice.
 */
 
-class Phone{
-  constructor(brand, model, storage, color, price){
-    this.brand = brand,
-    this.model = model,
-    this.storage = storage,
-    this.color = color,
-    this.price = price
-    this.sold = false
-  }
-  sell(){
-    this.sold === true;
-    console.log(`${this.brand} ${this.model} has been sold`);
-  }
-  changePrice(newPrice){
-    if(this.sold === false){
-this.price = newPrice}
-  }
-}
-let iphone = new Phone('apple', 'iphone10', '256 GB', 'black', 800);
+// class Phone{
+//   constructor(brand, model, storage, color, price){
+//     this.brand = brand,
+//     this.model = model,
+//     this.storage = storage,
+//     this.color = color,
+//     this.price = price
+//     this.sold = false
+//   }
+//   sell(){
+//     this.sold === true
+//     console.log(`${this.brand} ${this.model} has been sold`);
+//     this.sold = true
+    
+//   }
+//   changePrice(newPrice){
+//     if(this.sold === false){
+// this.price = newPrice}
+//   }
+// }
+// let iphone = new Phone('apple', 'iphone10', '256 GB', 'black', 800);
 
 
 
@@ -297,9 +299,9 @@ let iphone = new Phone('apple', 'iphone10', '256 GB', 'black', 800);
     - price: number
 */
 
-let galaxy = new Phone('Samsung', 'S20', '128 GB', 'Silver', 900);
-let htc = new Phone('HTC', 'One', '64 GB', 'white', 200);
-let onePlus = new Phone('Oneplus', '10 Pro', '256', 'gold', 900);
+// let galaxy = new Phone('Samsung', 'S20', '128 GB', 'Silver', 900);
+// let htc = new Phone('HTC', 'One', '64 GB', 'white', 200);
+// let onePlus = new Phone('Oneplus', '10 Pro', '256', 'gold', 900);
 
 
 /* 
@@ -309,8 +311,8 @@ let onePlus = new Phone('Oneplus', '10 Pro', '256', 'gold', 900);
   Then console.log that object to see the price change
 */ 
 
-onePlus.changePrice(600)
-console.log(onePlus)
+// onePlus.changePrice(600)
+// console.log(onePlus)
 
 
 /*
@@ -319,7 +321,8 @@ console.log(onePlus)
   Print the value of that phone's sell property to make sure it's been changed to true
 */
 
-//Code Here 
+// galaxy.sell()
+// console.log(galaxy.sold)
 
 
 //////////////////////////// PROBLEM 15 ////////////////////////////
@@ -338,7 +341,8 @@ const colors = {
 }
 //do not edit this object
 
-//Code Here 
+// const colorsCopy = { ...colors }
+// console.log(colorsCopy)
 
 
 
@@ -366,7 +370,11 @@ const shippingInfo = {
 }
 //do not edit the objects above
 
-//Code Here
+// const helensInfo = {
+//   ...shippingInfo, 
+//   ...contactInfo
+// }
+// console.log(helensInfo)
 
 
 //Print helensInfo to see what it looks like, there should be no repeating properties.
