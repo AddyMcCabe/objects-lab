@@ -392,14 +392,26 @@ const shippingInfo = {
   And finally, print the value of the mileage.
 */
 
-//Code Here 
+class Vehicle {
+  constructor(capacity, color, mileage){
+    this.capacity = capacity,
+    this.color = color,
+    this.mileage = mileage
+  }
+  move(miles){
+  this.mileage += miles
+  console.log(this.mileage)
+
+  }
+}
+
 
 
 /*
   Create a vehicle using your new class and save it to a variable called myFirstVehicle
 */
 
-//Code Here
+let myFirstVehicle = new Vehicle(2, 'red', 10000);
 
 
 /* 
@@ -410,13 +422,20 @@ const shippingInfo = {
   new ones: make and isCool. (Hint: don't forget to call the super function)
 */
 
-//Code Here
+class Motorcycle extends Vehicle {
+  constructor(capacity, color, mileage, make, isCool){
+    super(capacity, color, mileage)
+    this.make = make,
+    this.isCool = isCool
+  }
+}
 
 /*
   Create a Motorcycle using your new class and save it to a variable called myFirstMotorcycle
 */
 
-//Code Here 
+let myFirstMotorcycle = new Motorcycle(1, 'black', 400, 'Harley Davidson', true);
+myFirstMotorcycle.move(80)
 
 /*
   Call the move function on myFirstMotorcycle (don't forget the parameter)
